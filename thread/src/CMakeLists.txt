@@ -2,10 +2,10 @@
 project(src)
 
 include_directories(${PROJECT_SOURCE_DIR}/.
-  ${PROJECT_SOURCE_DIR}/../../../boost_libs/shared/include/boost-1_67
+  ${PROJECT_SOURCE_DIR}/../../../build_libs/boost/include/
 )
 
-link_directories(${PROJECT_SOURCE_DIR}/../../../boost_libs/static/lib)
+link_directories(${PROJECT_SOURCE_DIR}/../../../build_libs/boost/static/lib)
 
 
 #set(SEC_LIST test.cpp)
