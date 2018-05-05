@@ -1,0 +1,19 @@
+log4cpp.rootCategory=DEBUG
+log4cpp.category.defaultCategory=DEBUG, console_default
+log4cpp.category.running_log=DEBUG, console, allLogFile
+
+log4cpp.appender.allLogFile=RollingFileAppender
+log4cpp.appender.allLogFile.threshold=DEBUG
+log4cpp.appender.allLogFile.fileName=./running.log
+log4cpp.appender.allLogFile.maxFileSize=100000000
+log4cpp.appender.allLogFile.maxBackupIndex=10
+log4cpp.appender.allLogFile.layout=PatternLayout
+log4cpp.appender.allLogFile.layout.ConversionPattern=%d{%Y-%m-%d %H:%M:%S,%l} %p [%c]: %m%n
+
+log4cpp.appender.console_default=ConsoleAppender
+log4cpp.appender.console_default.layout=PatternLayout
+log4cpp.appender.console_default.layout.ConversionPattern=%d{%Y-%m-%d %H:%M:%S,%l} %p [default]: %m%n
+
+log4cpp.appender.console=ConsoleAppender
+log4cpp.appender.console.layout=PatternLayout
+log4cpp.appender.console.layout.ConversionPattern=%d{%Y-%m-%d %H:%M:%S,%l} %p [%c]: %m%n
